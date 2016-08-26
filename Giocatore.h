@@ -25,6 +25,10 @@ class Giocatore
         {
             iPartiteVinte++;
         }
+        std::string getNome()
+        {
+            return szNome;
+        }
 };
 
 #endif // GIOCATORE_H_INCLUDED
