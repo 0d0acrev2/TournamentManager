@@ -1,4 +1,4 @@
-#include "Giocatore.h"
+#include "Giocatore.cpp"
 #include <vector>
 
 class Classifica
@@ -15,13 +15,13 @@ class Classifica
         {
             return vClassifica.size();
         }
-        void aggiungiGiocatore(Giocatore giocatore, int index)
+        void aggiungiGiocatore(Giocatore &giocatore)
         {
             vClassifica.push_back (giocatore);
         }
-        Giocatore getPrimo()
+        Giocatore getAtIndex(int index)
         {
-            return vClassifica.at(0);
+            return vClassifica.at(index);
         }
 
 

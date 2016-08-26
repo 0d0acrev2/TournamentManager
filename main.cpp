@@ -2,8 +2,13 @@
 
 using namespace std;
 
+#include "Abbinamenti.h"
+
 int main()
 {
-    cout << "Hello world!" << endl;
+    Abbinamenti abbinamenti;
+
+    abbinamenti.creaAbbinamentiPrimoTurno();
+
     return 0;
 }

@@ -9,20 +9,12 @@ Gestione dei punti:
 
 Turni Complessivi: 3 + NumeroGiocatori/3;
 
-Top 4, 8, 16 in caso di piu persone, da calcolare le persone riferite alle top che farebbero
+Top 4, 8, 16 in caso di piu persone, da calcolare le persone riferite alle top che farebbero.
 
 Abbinamenti:
-- 1 Turno: Casuale
+- 1 Turno: Casuale ---> creaAbbinamentiPrimoTurno
 - 2 Turno: Chi ha vinto contro chi ha vinto e viceversa
 - 3 Turno: 
 - 4 Turno: 
 
-Classi: Giocatore, Abbinamento
-
-GIOCATORE:
--- Attributi: PartiteGiocate, PartiteVinte, Punti, Nome, ListaMazzi(Optional)
--- Metodi
-
-Abbinamenti:
--- Attributi: Matrice da 4*NumeroGiocatori/2, in cui salvare gli abbinamenti
--- Metodit
+Da Aggiungere: lettura di dati da file, e interfaccia grafica con QT
