@@ -10,11 +10,11 @@ class Giocatore
         std::string szListaMazzi, szNome;
 
     public:
-        Giocatore()
+        Giocatore(const std::string &stringapassata)
         {
             iPartiteVinte = 0;
             iPunteggio = 0;
-            //szNome = stringapassata;
+            szNome = stringapassata;
             //szListaMazzi = szListaMazzi;
         }
         int getNumeroPartiteGiocate()
