@@ -1,22 +1,28 @@
 #include "Giocatore.h"
+#include <vector>
 
 class Classifica
 {
     private:
-        Giocatore arrClassifica[255];
+        std::vector<Giocatore> vClassifica;
 
     public:
         Classifica()
         {
 
         }
-        Giocatore getPrimo()
+        int getVectorSize()
         {
-            return arrClassifica[0];
+            return vClassifica.size();
         }
-
         void aggiungiGiocatore(Giocatore giocatore, int index)
         {
-            arrClassifica[index] = giocatore;
+            vClassifica.push_back (giocatore);
         }
+        Giocatore getPrimo()
+        {
+            return vClassifica.at(0);
+        }
+
+
 };

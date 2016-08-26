@@ -8,7 +8,11 @@ class Abbinamenti
     private:
         int matriceDegliAbbinamenti[255][255];
         Classifica classifica;
-        void creaAbbinamenti();
+        void creaAbbinamenti()
+        {
+            int numeroGiocatori = classifica.getVectorSize();
+
+        }
 
     public:
         Abbinamenti()
