@@ -6,13 +6,24 @@
 class Giocatore
 {
     private:
-        int iPartiteGiocate, iPartiteVinte, iPuntiTotali;
+        int iPartiteVinte, iPunteggio;
         std::string szListaMazzi, szNome;
 
     public:
-        int getPartiteGiocate()
+        Giocatore()
         {
-            return iPartiteGiocate;
+            iPartiteVinte = 0;
+            iPunteggio = 0;
+            //szNome = stringapassata;
+            //szListaMazzi = szListaMazzi;
+        }
+        int getNumeroPartiteGiocate()
+        {
+            return iPartiteVinte;
+        }
+        void aggiungiVittoria()
+        {
+            iPartiteVinte++;
         }
 };
 
