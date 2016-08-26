@@ -7,6 +7,11 @@ class Giocatore
         std::string szListaMazzi, szNome;
 
     public:
+        Giocatore()
+        {
+            iPartiteVinte = 0;
+            iPunteggio = 0;
+        }
         Giocatore(const std::string &stringapassata)
         {
             iPartiteVinte = 0;

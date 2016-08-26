@@ -11,6 +11,27 @@ class Abbinamenti
 private:
     Giocatore matriceAbbinamenti[255][2];
     Classifica classifica;
+    void creaArrayConNumeriTuttiDiversi(int numeroGiocatori, int vettore[])
+    {
+        srand (time(NULL));
+        for(int i=0; i<numeroGiocatori; i++)
+        {
+            int error = 0;
+            int temp = 0;
+            do             // controlla se già presente nell'array
+            {
+                temp = rand() % numeroGiocatori;
+                error = 0;
+                for(int k=0; k<=i; k++)
+                {
+                    if(vettore[k] == temp)
+                        error = 1;
+                }
+            }
+            while(error == 1);
+            vettore[i] = temp;
+        }
+    }
 
 public:
     Abbinamenti()
@@ -31,37 +52,22 @@ public:
         int numeroGiocatori = classifica.getVectorSize();
         int listaNumeriDiversi[numeroGiocatori];
 
-        //Crea Array con numeri tutti diversi
-        srand (time(NULL));
-        for(int i=0; i<numeroGiocatori; i++)
+        creaArrayConNumeriTuttiDiversi(numeroGiocatori, listaNumeriDiversi);
+
+        //Creazione Abbinamenti Primo Turno ed aggiunta di essi alla matrice
         {
-            int error = 0;
-            int temp = 0;
-            do             // controlla se già presente nell'array
+            int k=0;
+            for(int i=0; i<numeroGiocatori; i=i+2, k++)
             {
-                temp = rand() % numeroGiocatori;
-                error = 0;
-                for(int k=0; k<=i; k++)
-                {
-                    if(listaNumeriDiversi[k] == temp)
-                        error = 1;
-                }
+                std::cout << classifica.getAtIndex(listaNumeriDiversi[i]).getNome();
+                std::cout << " VS ";
+                std::cout << classifica.getAtIndex(listaNumeriDiversi[i+1]).getNome() << std::endl;
+
+                //inserimento giocatori in matrice degli abbinamenti
+                matriceAbbinamenti[0][k] = classifica.getAtIndex(listaNumeriDiversi[i]);
+                matriceAbbinamenti[0][k+1] = classifica.getAtIndex(listaNumeriDiversi[i]);
             }
-            while(error == 1);
-            listaNumeriDiversi[i] = temp;
         }
-        //Stampa di Prova e aggiunta delle stringhe nella matrice
-        for(int i=0, int k=0; i<numeroGiocatori; i=i+2, k++)
-        {
-            std::cout << classifica.getAtIndex(listaNumeriDiversi[i]).getNome();
-            std::cout << " VS ";
-            std::cout << classifica.getAtIndex(listaNumeriDiversi[i+1]).getNome() << std::endl;
-
-            //inserimento giocatori in matrice degli abbinamenti
-            matriceDegliAbbinamenti[0][k] = classifica.getAtIndex(listaNumeriDiversi[i]);
-            matriceDegliAbbinamenti[0][k+1] = classifica.getAtIndex(listaNumeriDiversi[i]);
-        }
-
     }
 };
 
