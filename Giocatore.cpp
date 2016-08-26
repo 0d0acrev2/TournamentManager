@@ -19,13 +19,14 @@ class Giocatore
             szNome = stringapassata;
             //szListaMazzi = szListaMazzi;
         }
-        int getNumeroPartiteGiocate()
+        int getNumeroPartiteVinte()
         {
             return iPartiteVinte;
         }
         void aggiungiVittoria()
         {
             iPartiteVinte++;
+            iPunteggio = iPunteggio + 1;
         }
         std::string getNome()
         {

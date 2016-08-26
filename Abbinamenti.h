@@ -34,6 +34,10 @@ private:
     }
 
 public:
+    std::string getCoppia(int index)
+    {
+        return matriceAbbinamenti[index][0].getNome() + " o " + matriceAbbinamenti[index][1].getNome();
+    }
     Abbinamenti()
     {
         Giocatore giocatoreProva("0d0acre");
@@ -64,8 +68,8 @@ public:
                 std::cout << classifica.getAtIndex(listaNumeriDiversi[i+1]).getNome() << std::endl;
 
                 //inserimento giocatori in matrice degli abbinamenti
-                matriceAbbinamenti[0][k] = classifica.getAtIndex(listaNumeriDiversi[i]);
-                matriceAbbinamenti[0][k+1] = classifica.getAtIndex(listaNumeriDiversi[i]);
+                matriceAbbinamenti[k][k] = classifica.getAtIndex(listaNumeriDiversi[i]);
+                matriceAbbinamenti[k][k+1] = classifica.getAtIndex(listaNumeriDiversi[i+1]);
             }
         }
     }

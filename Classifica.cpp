@@ -24,5 +24,4 @@ class Classifica
             return vClassifica.at(index);
         }
 
-
 };
