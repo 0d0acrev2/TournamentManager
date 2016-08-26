@@ -1,0 +1,28 @@
+Possibilità di selezionare la quantita di persone giocanti.
+Quindi istantaneo sarà il calcolo del bye per ognuno in caso di giocanti dispari.
+
+Gestione dei punti:
+- Vittoria ---> Punti Complessivi: 1 + (1/10 * NumeroVittorieAvversario) 
+- Sconfitta ---> Punti Complessivi: 0
+- Patta ---> Punti Complessivi: 0,5 ciascuno
+- Bye ---> 0,5
+
+Turni Complessivi: 3 + NumeroGiocatori/3;
+
+Top 4, 8, 16 in caso di piu persone, da calcolare le persone riferite alle top che farebbero
+
+Abbinamenti:
+- 1 Turno: Casuale
+- 2 Turno: Chi ha vinto contro chi ha vinto e viceversa
+- 3 Turno: 
+- 4 Turno: 
+
+Classi: Giocatore, Abbinamento
+
+GIOCATORE:
+-- Attributi: PartiteGiocate, PartiteVinte, Punti, Nome, ListaMazzi(Optional)
+-- Metodi
+
+Abbinamenti:
+-- Attributi: Matrice da 4*NumeroGiocatori/2, in cui salvare gli abbinamenti
+-- Metodit
