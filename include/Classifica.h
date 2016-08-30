@@ -12,7 +12,7 @@ private:
 public:
     Classifica();
     int getVectorSize();
-    void aggiungiGiocatore(Giocatore &giocatore);
+    void aggiungiGiocatore(Giocatore *giocatore);
     Giocatore getAtIndex(int index);
 
 };

@@ -8,10 +8,10 @@ class Abbinamenti
 {
 private:
     Giocatore matriceAbbinamenti[255][2];
-    Classifica classifica;
     void creaArrayConNumeriTuttiDiversi(int numeroGiocatori, int vettore[]);
 
 public:
+    Classifica *classifica;
     std::string getCoppia(int index);
     Abbinamenti();
     void creaAbbinamentiPrimoTurno();

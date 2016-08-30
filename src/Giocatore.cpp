@@ -1,5 +1,7 @@
 #include "Giocatore.h"
 
+#include <sstream>
+
 Giocatore::Giocatore()
 {
     iPartiteVinte = 0;
@@ -12,6 +14,15 @@ Giocatore::Giocatore(const std::string &stringapassata)
     szNome = stringapassata;
     //szListaMazzi = szListaMazzi;
 }
+Giocatore::Giocatore(char passato[])
+{
+    iPartiteVinte = 0;
+    iPunteggio = 0;
+    std::stringstream stringStreamAppoggio;
+    stringStreamAppoggio << passato;
+    stringStreamAppoggio >> szNome;
+}
+
 int Giocatore::getNumeroPartiteVinte()
 {
     return iPartiteVinte;

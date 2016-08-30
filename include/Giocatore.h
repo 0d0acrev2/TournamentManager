@@ -12,6 +12,7 @@ private:
 public:
     Giocatore();
     Giocatore(const std::string &stringapassata);
+    Giocatore(char passato[]);
     int getNumeroPartiteVinte();
     void aggiungiVittoria();
     std::string getNome();

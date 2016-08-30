@@ -33,21 +33,14 @@ std::string Abbinamenti::getCoppia(int index)
 
 Abbinamenti::Abbinamenti()
 {
-    Giocatore giocatoreProva("0d0acre");
-    Giocatore giocatoreProva2("Alassio");
-    Giocatore giocatoreProva3("Marcello");
-    Giocatore giocatoreProva4("Povia");
+    classifica = new Classifica();
 
-    classifica.aggiungiGiocatore(giocatoreProva);
-    classifica.aggiungiGiocatore(giocatoreProva2);
-    classifica.aggiungiGiocatore(giocatoreProva3);
-    classifica.aggiungiGiocatore(giocatoreProva4);
 
 }
 
 void Abbinamenti::creaAbbinamentiPrimoTurno()
 {
-    int numeroGiocatori = classifica.getVectorSize();
+    int numeroGiocatori = classifica->getVectorSize();
     int listaNumeriDiversi[numeroGiocatori];
 
     creaArrayConNumeriTuttiDiversi(numeroGiocatori, listaNumeriDiversi);
@@ -57,13 +50,13 @@ void Abbinamenti::creaAbbinamentiPrimoTurno()
         int k=0;
         for(int i=0; i<numeroGiocatori; i=i+2, k++)
         {
-            std::cout << classifica.getAtIndex(listaNumeriDiversi[i]).getNome();
+            std::cout << classifica->getAtIndex(listaNumeriDiversi[i]).getNome();
             std::cout << " VS ";
-            std::cout << classifica.getAtIndex(listaNumeriDiversi[i+1]).getNome() << std::endl;
+            std::cout << classifica->getAtIndex(listaNumeriDiversi[i+1]).getNome() << std::endl;
 
             //inserimento giocatori in matrice degli abbinamenti
-            matriceAbbinamenti[k][k] = classifica.getAtIndex(listaNumeriDiversi[i]);
-            matriceAbbinamenti[k][k+1] = classifica.getAtIndex(listaNumeriDiversi[i+1]);
+            matriceAbbinamenti[k][k] = classifica->getAtIndex(listaNumeriDiversi[i]);
+            matriceAbbinamenti[k][k+1] = classifica->getAtIndex(listaNumeriDiversi[i+1]);
         }
     }
 }
