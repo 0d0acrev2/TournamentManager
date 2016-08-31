@@ -14,6 +14,7 @@ public:
     Giocatore(const std::string &stringapassata);
     Giocatore(char passato[]);
     int getNumeroPartiteVinte();
+    int getPunteggio();
     void aggiungiVittoria();
     std::string getNome();
 };

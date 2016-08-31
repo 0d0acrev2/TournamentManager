@@ -6,15 +6,12 @@
 
 class Classifica
 {
-private:
-    std::vector<Giocatore> vClassifica;
-
 public:
+    std::vector<Giocatore> vClassifica;
     Classifica();
     int getVectorSize();
     void aggiungiGiocatore(Giocatore *giocatore);
     Giocatore getAtIndex(int index);
-
 };
 
 #endif // CLASSIFICA_H

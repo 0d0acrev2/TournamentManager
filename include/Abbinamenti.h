@@ -7,10 +7,10 @@
 class Abbinamenti
 {
 private:
-    Giocatore matriceAbbinamenti[255][2];
     void creaArrayConNumeriTuttiDiversi(int numeroGiocatori, int vettore[]);
 
 public:
+    Giocatore matriceAbbinamenti[255][2];
     Classifica *classifica;
     std::string getCoppia(int index);
     Abbinamenti();

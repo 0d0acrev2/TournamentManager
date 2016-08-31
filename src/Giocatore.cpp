@@ -27,6 +27,10 @@ int Giocatore::getNumeroPartiteVinte()
 {
     return iPartiteVinte;
 }
+int Giocatore::getPunteggio()
+{
+    return iPunteggio;
+}
 void Giocatore::aggiungiVittoria()
 {
     iPartiteVinte++;

@@ -34,8 +34,6 @@ std::string Abbinamenti::getCoppia(int index)
 Abbinamenti::Abbinamenti()
 {
     classifica = new Classifica();
-
-
 }
 
 void Abbinamenti::creaAbbinamentiPrimoTurno()
